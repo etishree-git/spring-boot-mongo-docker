@@ -1,6 +1,6 @@
 services:
   springboot:
-    image: etishreebehera/spring-boot-mongo:1
+    image: etishreebehera/spring-boot-app:4
     restart: always # This will be ignored if we deploy in docker swarm
     environment:
     - MONGO_DB_HOSTNAME=mongo
