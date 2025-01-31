@@ -12,7 +12,7 @@ services:
     depends_on:
       - mongo
     networks:
-    - springappoverlay 
+    - javawebappoverlay 
     deploy:  # This will be considered only in docker swarm.
       replicas: 2
       update_config:
@@ -32,12 +32,12 @@ services:
       - mongovol:/data/db
     restart: always
     networks:
-    - springappoverlay
+    - javawebappoverlay
     
 volumes:
   mongovol:
     driver: local
     
 networks:
-  springappoverlay:
+  javawebappoverlay:
     driver: overlay
