@@ -46,7 +46,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: springappdeployment
+  name: springapp
 spec:
   replicas: 2
   selector:
@@ -54,13 +54,13 @@ spec:
       app: springapp
   template:
     metadata:
-      name: springapppod
+      name: springapp
       labels:
         app: springapp
     spec:
       containers:
-      - name: springappcontainer
-        image: dockerhandson/spring-boot-mongo
+      - name: springapp
+        image: etishreebehera/spring-boot-app:IMAGE_TAG_PLACEHOLDER
         ports:
         - containerPort: 8080
         env:
